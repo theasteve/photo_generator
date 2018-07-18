@@ -11,10 +11,6 @@ For safety reasons one should store Keys and Secrets in environment variables. E
 * `export FLICKR_API_KEY="<FLICKR_API_KEY>"`
 * `export FLICKR_SECRET_CODE="<FLICKR_SECRET_CODE>"`
 
-If you downloaded the zip folder your Desktop navigate to the folder by typing in your terminal the following:
-
-`cd Desktop/sa_jibe_application`
-
 Once inside the folder run:
 `bundle install`
 
@@ -63,11 +59,3 @@ Also, the Flickr search method returns a results objects. Each photo in the sear
 
 After reading the Flickr API documentation I was able to get these data by adding a field `extras:` to which I passed a string with the data I needed to fetch as follows:
 `"count_comments,tags, url_m"`
-
-# Time Constraint
-
-I spent about 8 hours working on this project. At first, I found myself with a code which I felt had a bunch of dependencies and wasn't readable. I also took some time reading the documentation.
-
-After refactoring, I feel that the current code follows object-oriented design principles. The used of classes and separating the functionality of each API I felt it was necessary in order to manage dependencies.
-
-One thing I worried is that I over-engineer by adding an extra class(TweetConverter) instead of using the Twitter Object building methods. I thought that was the right decision since not all the building methods of the Tweeter Object return by the Twitter API had the functionality I needed in order to meet the specific criteria described in the directions.
