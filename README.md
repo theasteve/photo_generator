@@ -51,9 +51,11 @@ Results:
 
 Unlike the Twitter API, the Flickr API search method returns all the objects that met the criteria passed as arguments in the search method. In order to deal with the order dependency I set the arguments to be a hash as shown in the following method:
 
-```def get_photos(args={})
+```
+def get_photos(args={})
   @photos = @flickr.photos.search(args)
-end```
+end
+```
 
 Also, the Flickr search method returns a results objects. Each photo in the search results missed some of the data such as the image URL, the number of comments needed to rank them and the tags needed to filter the photos based on the tag "#dctech".
 
